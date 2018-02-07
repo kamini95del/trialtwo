@@ -1,0 +1,14 @@
+<apex:page title="Welcome {!$Profile.Name}" controller="firstpage">
+    <apex:form >
+        <apex:outputLabel >
+           <br/> <h4 >
+                Relocation App!!!
+            </h4>
+      </apex:outputLabel>
+         <div style="height:30px;width:150px;margin-top:20px;margin-left:20px;
+                font-size:15px;color:purple;"/>
+        <apex:commandButton value="Create Lead" action="{!leadcreate}"/> <br/> <br/>
+        <apex:commandButton value="Convert Leads" action="{!leadconvert}"/> <br/> <br/>
+        <apex:commandButton value="Update Account" action="{!updateacc}"/> <br/> <br/>
+    </apex:form>
+</apex:page>

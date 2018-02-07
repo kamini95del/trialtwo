@@ -1,0 +1,19 @@
+<apex:page controller="contact_display">
+    <apex:form >
+        <apex:selectRadio value="{!country}" layout="pageDirection">
+            <apex:selectOptions value="{!items}"/>
+            </apex:selectRadio><p/>
+            <apex:commandButton value="Next" action="{!next}" />
+            <apex:commandButton value="Cancel" action="{!prev}" />
+     </apex:form>
+    <!-- <apex:outputPanel id="out">
+          <apex:actionstatus id="status" startText="testing..."> 
+             <apex:facet name="stop"> 
+               <apex:outputPanel > 
+                <p>You have selected:</p> -->
+                 <apex:outputText value="{!country}"/> 
+            <!--  </apex:outputPanel>
+            </apex:facet> 
+          </apex:actionstatus> 
+     </apex:outputPanel> -->
+</apex:page>

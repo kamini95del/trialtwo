@@ -1,0 +1,20 @@
+<apex:page controller="product_details">
+<apex:form >    
+    <apex:pageBlock title="ORDER DETAILS" tabStyle="Contact">
+    <apex:pageBlockSection title="Delivery Information" columns="2">
+    <apex:inputField value="{!opp.name}"/>
+    <apex:inputField value="{!opp.StageName}"/>
+    <apex:inputField value="{!opp.Pick_up_Date__c}"/>
+    <apex:inputField value="{!opp.Delivery_Date__c}"/>
+    <apex:inputField value="{!opp.CloseDate}"/> 
+    <apex:inputField value="{!opp.Insurance__c}" />
+    </apex:pageBlockSection> <br/> <br/> 
+     
+     
+     <apex:pageBlockButtons >
+         <apex:commandButton action="{!prev}" value="Previous" immediate="true"/>
+         <apex:commandButton action="{!save}" value="Save And Next"/>
+     </apex:pageBlockButtons>
+     </apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,51 @@
+<apex:page controller="convertlead">
+     <apex:form >
+     <apex:pageMessages id="showmsg"></apex:pageMessages>
+    
+      <apex:pageBlock title="Account Details" tabStyle="contact">
+       <apex:pageBlockSection title="Employment Information" columns="3">
+        <apex:inputField value="{!acc.name}" required="true"/>
+       <!-- <apex:inputField value="{!acc.Industry}"/> -->
+        </apex:pageBlockSection> <br/> <br/> 
+        <apex:pageBlockSection columns="3">
+        <apex:inputField value="{!acc.billingstate}"/>
+        <apex:inputField value="{!acc.billingcity}"/>
+        <apex:inputField value="{!acc.billingcountry}"/>
+        </apex:pageBlockSection><br/>
+        
+        
+        <apex:pageBlockSection title="Contact Details" columns="3">
+        <apex:inputField value="{!con.Mailingstreet}" required="true"/>
+        <apex:inputField value="{!con.Mailingcity}" required="true"/>
+        <apex:inputField value="{!con.Mailingstate}" required="true"/>
+        </apex:pageBlockSection> <br/> <br/>
+        <apex:pageBlockSection columns="3">
+        <apex:inputField value="{!con.Mailingpostalcode}" required="true"/>
+        <apex:inputField value="{!con.Mailingcountry}" required="true"/> <br/> <br/>
+       
+        <apex:inputField value="{!con.phone}" required="true"/>
+        <apex:inputField label="Shipping Street" value="{!con.otherstreet}" required="true"/>
+        <apex:inputField label="Shipping City" value="{!con.othercity}" required="true"/>
+        <apex:inputField label="Shipping State" value="{!con.otherstate}" required="true"/>
+        </apex:pageBlockSection> <br/> <br/>
+        <apex:pageBlockSection columns="3">
+        <apex:inputField label="Postal Code" value="{!con.otherpostalcode}" required="true"/>
+        <apex:inputField label="Country" value="{!con.othercountry}" required="true"/>
+        </apex:pageBlockSection>
+ <!-- to be removed after merge-->
+        <apex:pageBlockSection columns="3">
+        <apex:inputField label="Last Name" value="{!con.lastname}" />
+        <apex:inputField label="Email" value="{!con.email}" required="true"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons >
+        <apex:commandButton action="{!updateacc}" value="Update Account"/>
+        <apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+        </apex:pageBlockButtons>
+        </apex:pageBlock>  
+        
+        
+               
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,32 @@
+<apex:page controller="insert_lead">
+<apex:form >  
+  <apex:pageMessages id="showmsg"></apex:pageMessages>
+    
+      <apex:pageblock title="Lead Details" tabstyle="Contact">
+       <apex:pageBlockSection title="Personal Information" columns="3">
+        <apex:inputField value="{!lead1.firstName}" required="true"/>
+        <apex:inputField value="{!lead1.LastName}"/>
+        <apex:selectList label="Lead Status*" size="1" value="{!propPickValSelected}" styleClass="form-select" required="true">
+         <apex:selectOptions value="{!PickLstValue}"/>
+         </apex:selectList>
+        <apex:inputField value="{!lead1.company}"/>
+        <apex:inputField value="{!lead1.MobilePhone}" required="true"/>
+        <apex:inputField value="{!lead1.Email}" required="true"/>
+        </apex:PageBlockSection> <br/><br/>
+        
+        <apex:pageBlockSection title="Addresss Details" columns="3">
+        <apex:inputField value="{!lead1.street}"/>
+        <apex:inputField value="{!lead1.city}"/>
+        <apex:inputField value="{!lead1.state}"/>
+        <apex:inputField value="{!lead1.postalcode}"/>
+        <apex:inputField value="{!lead1.country}"/>
+        </apex:pageBlockSection><br/>
+        
+        <apex:pageBlockButtons >
+        <apex:commandButton action="{!Save}" value="Save"/>
+        <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true"/>
+        </apex:pageBlockButtons>
+        
+        </apex:pageblock>
+</apex:form>
+</apex:page>
