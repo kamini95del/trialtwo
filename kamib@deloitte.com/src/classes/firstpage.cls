@@ -6,7 +6,8 @@ public with sharing class firstpage{
     }
    
 
-    public PageReference leadconvert() {
+    public PageReference leadconvert() 
+    {
         PageReference vf2=new PageReference('/apex/lead_display');
         return vf2;
     }
